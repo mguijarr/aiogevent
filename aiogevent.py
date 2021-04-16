@@ -5,21 +5,7 @@ import greenlet
 import socket
 import sys
 import threading
-
-try:
-    import asyncio
-
-    if sys.platform == 'win32':
-        from asyncio.windows_utils import socketpair
-    else:
-        socketpair = socket.socketpair
-except ImportError:
-    import trollius as asyncio
-
-    if sys.platform == 'win32':
-        from trollius.windows_utils import socketpair
-    else:
-        socketpair = socket.socketpair
+import asyncio
 
 _PY3 = sys.version_info >= (3,)
 

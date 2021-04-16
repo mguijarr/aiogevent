@@ -35,14 +35,14 @@ elif (3, 3) <= sys.version_info < (3, 4):
     requirements.append('asyncio>=0.4.1')
 else:
     # Python 2.6-3.2: use Trollius
-    requirements.append('trollius>=0.3')
+    requirements.append('trollius>=0.4')
 
 with open("README") as fp:
     long_description = fp.read()
 
 install_options = {
     "name": "aiogevent",
-    "version": "0.3",
+    "version": "0.4",
     "license": "Apache License 2.0",
     "author": 'Victor Stinner',
     "author_email": 'victor.stinner@gmail.com',
